@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
+            
             HStack {
                 VStack (alignment: .leading) {
                     Text("WorkWell")
@@ -24,29 +25,39 @@ struct ContentView: View {
                 Image("red-lotus")
                     .padding(.trailing)
             }
-            Spacer()
-            MeditatingMan()
-                        .padding(.top)
+            
             Spacer()
             
-                Button(action: {
-                    // What to perform
-                }) {
-                    // How the button looks like
-                    Text("Start Here")
-                        .padding(.all)
-                        
-                }
-                Button(action: {
-                    // What to perform
-                    exit(0)
-                }) {
-                    // How the button looks like
-                    Text("Exit")
-                        .padding(.all)
-                        
-                }
-                
+            MeditatingMan()
+                        .padding(.top)
+            
+            Spacer()
+            
+            Button(action: {
+                // What to perform
+            }) {
+                // How the button looks
+                Text("Start Here")
+                    .foregroundColor(.black)
+                    .padding(.all)
+                    .frame(minWidth: 0, maxWidth: 300)
+                    .border(Color.black, width: 1)
+            }
+            
+            Button(action: {
+                // What to perform
+                exit(0)
+            }) {
+                // How the button looks
+                Text("Exit")
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+                    .padding(.all)
+                    .frame(minWidth: 0, maxWidth: 300)
+                    .background(Color(red: 0.792156862745098, green: 0.00784313725490196, blue: 0.00392156862745098))
+            }
+            
+            Spacer()
         }
     }
 }
