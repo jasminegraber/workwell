@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         VStack {
             Spacer()
@@ -28,7 +28,7 @@ struct ContentView: View {
             
             Spacer()
             
-            MeditatingMan()
+            Image("meditation-person")
                         .padding(.top)
             
             Spacer()
@@ -65,6 +65,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+      
+            HomeView()
+        
     }
 }
